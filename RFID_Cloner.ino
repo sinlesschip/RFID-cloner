@@ -33,7 +33,6 @@ void setup() {
     SPI.begin();                // Init SPI bus
     mfrc522.PCD_Init();         // Init MFRC522 card
 
-    Serial.println(F("Try the most used default keys to print block 0 to 63 of a MIFARE PICC."));
     Serial.println("1.Copy data from card \n2.Display copied data \n3.Copy the data to new card.");
 
 }
@@ -53,6 +52,7 @@ void loop() {
     {
       //See copied details
       dump_card_buffer();
+      Serial.println("1.Copy data from card \n2.Display copied data \n3.Copy the data to new card.");
     }
     else if(choice == '3')
     {
